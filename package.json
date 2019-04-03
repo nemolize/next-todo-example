@@ -6,7 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bulma": "^0.7.4",
     "next": "^8.0.4",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
