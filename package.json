@@ -2,8 +2,7 @@
   "name": "next-todo",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
