@@ -17,8 +17,7 @@ class TodoList extends Component {
     this.deleteModal = React.createRef()
   }
 
-  handleChange = ({ target: { value } }) =>
-    this.setState(state => ({ ...state, name: value }))
+  updateName = name => this.setState(state => ({ ...state, name }))
   toggle = id =>
     this.setState(state => {
       const list = state.todos.list.map(todo => {
@@ -66,7 +65,8 @@ class TodoList extends Component {
                 className="input"
                 type="text"
                 placeholder="Name"
-                onChange={this.handleChange}
+                value={name}
+                onChange={e => this.updateName(e.target.value)}
               />
               <span className="icon is-small is-left">
                 <i className="fas fa-pen" />
