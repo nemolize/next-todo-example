@@ -31,16 +31,16 @@ jobs:
       - run: apk add --no-cache ca-certificates
       - checkout
       - *restore_cache_node_modules
-      - run: yarn lint
+#      - run: yarn lint
   test:
     <<: *defaults
     steps:
       - run: apk add --no-cache ca-certificates
       - checkout
       - *restore_cache_node_modules
-      - run: yarn test
-      - run: npm config set unsafe-perm true # temporary fix for https://github.com/nodejs/docker-node/issues/813
-      - run: npx codecov --token=$CODECOV_TOKEN
+#      - run: yarn test
+#      - run: npm config set unsafe-perm true # temporary fix for https://github.com/nodejs/docker-node/issues/813
+#      - run: npx codecov --token=$CODECOV_TOKEN
   deploy:
     <<: *defaults
     steps:
