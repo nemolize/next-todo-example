@@ -31,7 +31,7 @@ jobs:
       - run: apk add --no-cache ca-certificates
       - checkout
       - *restore_cache_node_modules
-#      - run: yarn lint
+      - run: yarn lint
   test:
     <<: *defaults
     steps:
