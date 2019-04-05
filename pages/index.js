@@ -1,35 +1,34 @@
-import React, { Component } from 'react'
-import Head from '../components/head'
-import TodoList from '../components/todo-list'
-import DeleteModal from '../components/delete-modal'
+import React from 'react'
+import { Head } from '../components/head'
+import { TodoList } from '../components/todo-list'
+import { DeleteModal } from '../components/delete-modal'
 import { TodoAdd } from '../components/todo-add'
 
-class Home extends Component {
-  state = {
-    list: [
-      { id: 1, done: true, name: 'Buy a milk for my boss' },
-      { id: 2, done: false, name: 'Send a mail to a client' }
-    ],
-    counter: 3
+export default () => {
+  const [list, setList] = React.useState([
+    { id: 1, done: true, name: 'Buy a milk for my boss' },
+    { id: 2, done: false, name: 'Send a mail to a client' }
+  ])
+
+  const [counter, setCounter] = React.useState(3)
+
+  const add = name => {
+    setList(list.concat({ id: counter, name, done: false }))
+    setCounter(counter + 1)
   }
 
-  deleteModal = React.createRef()
+  const remove = todo => setList(list.filter(({ id }) => id !== todo.id))
 
-  add = name => {
-    this.setState(state => ({
-      ...state,
-      list: [...state.list, { id: state.counter, name, done: false }],
-      counter: state.counter + 1
-    }))
+  const toggle = id => {
+    const newList = [...list]
+    const target = newList.find(todo => todo.id === id)
+    if (target) target.done = !target.done
+    setList(newList)
   }
 
-  remove = todo =>
-    this.setState(state => ({
-      ...state,
-      list: state.list.filter(({ id }) => id !== todo.id)
-    }))
+  let deleteModalRef = React.useRef()
 
-  render = () => (
+  return (
     <>
       <Head title="next-todo" />
       <section className="hero">
@@ -44,15 +43,16 @@ class Home extends Component {
         </div>
       </section>
       <section className="container">
-        <TodoAdd onAdd={this.add} />
+        <TodoAdd onAdd={add} />
         <TodoList
-          todos={this.state.list}
-          onRemove={todo => this.deleteModal.current.askRemove(todo)}
+          todos={list}
+          onToggle={toggle}
+          onClickRemove={todo => {
+            return deleteModalRef.current.show(todo)
+          }}
         />
       </section>
-      <DeleteModal ref={this.deleteModal} onRemove={this.remove} />
+      <DeleteModal ref={deleteModalRef} onRemove={remove} />
     </>
   )
 }
-
-export default Home
