@@ -1,3 +1,5 @@
+import React from 'react'
+import { array, func } from 'prop-types'
 export const TodoList = ({ todos, onToggle, onClickRemove }) => (
   <>
     <div className="container todolist">
@@ -42,3 +44,9 @@ export const TodoList = ({ todos, onToggle, onClickRemove }) => (
     </div>
   </>
 )
+
+TodoList.propTypes = {
+  todos: array,
+  onToggle: func,
+  onClickRemove: func
+}

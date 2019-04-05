@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { func } from 'prop-types'
 
 export const TodoAdd = props => {
   const [name, setName] = useState('')
@@ -33,4 +34,8 @@ export const TodoAdd = props => {
       </div>
     </form>
   )
+}
+
+TodoAdd.propTypes = {
+  onAdd: func
 }
