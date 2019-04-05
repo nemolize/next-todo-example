@@ -13,6 +13,7 @@ https://next-example-todo.now.sh/
 - 機能は Todo アイテムの `追加` と `削除` 及び `完了トグル`
 - コンポーネント間通信方法の実装例として、削除時の確認用 `モーダルダイアログ` の実装を行った。
 - 全て`Function Component`として実装しステート管理は `React Hooks` を利用して行っている。
+- [nuxt-todo](https://github.com/nemolize/nuxt-todo) とは異なり `LocalStorage` への保存は現段階では未実装 
 
 ##### その他
 
