@@ -58,13 +58,13 @@ workflows:
   deploy:
     jobs:
       - prepare
-      - lint:
-          requires:
-            - prepare
+#      - lint:
+#          requires:
+#            - prepare
       - test:
           requires:
             - prepare
       - deploy:
           requires:
-            - lint
+#            - lint
             - test
