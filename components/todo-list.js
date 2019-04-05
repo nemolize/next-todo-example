@@ -6,13 +6,11 @@ class TodoList extends Component {
     super()
     this.state = {
       name: '',
-      todos: {
-        list: [
-          { id: 1, done: true, name: 'Buy a milk for my boss' },
-          { id: 2, done: false, name: 'Send a mail to a client' }
-        ],
-        counter: 3
-      }
+      list: [
+        { id: 1, done: true, name: 'Buy a milk for my boss' },
+        { id: 2, done: false, name: 'Send a mail to a client' }
+      ],
+      counter: 3
     }
     this.deleteModal = React.createRef()
   }
@@ -20,30 +18,25 @@ class TodoList extends Component {
   updateName = name => this.setState(state => ({ ...state, name }))
   toggle = id =>
     this.setState(state => {
-      const list = state.todos.list.map(todo => {
+      const list = state.list.map(todo => {
         if (todo.id === id) todo.done = !todo.done
         return todo
       })
-      return { ...state, todos: { ...state.todos, list } }
+      return { ...state, list }
     })
   askRemove = todo => this.deleteModal.current.askRemove(todo)
   remove = todo =>
     this.setState(state => ({
       ...state,
-      todos: {
-        ...state.todos,
-        list: state.todos.list.filter(({ id }) => id !== todo.id)
-      }
+      list: state.list.filter(({ id }) => id !== todo.id)
     }))
   add = name => {
     this.setState(state => {
-      const { counter, list } = state.todos
+      const { counter, list } = state
       return {
         ...state,
-        todos: {
-          list: [...list, { id: counter, name, done: false }],
-          counter: counter + 1
-        },
+        list: [...list, { id: counter, name, done: false }],
+        counter: counter + 1,
         name: ''
       }
     })
@@ -54,7 +47,7 @@ class TodoList extends Component {
   }
 
   render() {
-    const { name, todos } = this.state
+    const { name, list } = this.state
     return (
       <>
         <DeleteModal ref={this.deleteModal} onRemove={this.remove} />
@@ -91,7 +84,7 @@ class TodoList extends Component {
               </tr>
             </thead>
             <tbody>
-              {todos.list.map(todo => {
+              {list.map(todo => {
                 return (
                   <tr key={todo.id}>
                     <td className="has-text-centered">
