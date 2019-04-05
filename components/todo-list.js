@@ -1,21 +1,6 @@
-import React, { Component } from 'react'
-import DeleteModal from './delete-modal'
+import React, {Component} from 'react'
 
 class TodoList extends Component {
-  constructor() {
-    super()
-    this.state = {
-      name: '',
-      list: [
-        { id: 1, done: true, name: 'Buy a milk for my boss' },
-        { id: 2, done: false, name: 'Send a mail to a client' }
-      ],
-      counter: 3
-    }
-    this.deleteModal = React.createRef()
-  }
-
-  updateName = name => this.setState(state => ({ ...state, name }))
   toggle = id =>
     this.setState(state => {
       const list = state.list.map(todo => {
@@ -24,56 +9,12 @@ class TodoList extends Component {
       })
       return { ...state, list }
     })
-  askRemove = todo => this.deleteModal.current.askRemove(todo)
-  remove = todo =>
-    this.setState(state => ({
-      ...state,
-      list: state.list.filter(({ id }) => id !== todo.id)
-    }))
-  add = name => {
-    this.setState(state => {
-      const { counter, list } = state
-      return {
-        ...state,
-        list: [...list, { id: counter, name, done: false }],
-        counter: counter + 1,
-        name: ''
-      }
-    })
-  }
-  onSubmitAdd = e => {
-    e.preventDefault()
-    this.add(this.state.name)
-  }
+  askRemove = todo => this.props.onRemove(todo)
 
   render() {
-    const { name, list } = this.state
     return (
       <>
-        <DeleteModal ref={this.deleteModal} onRemove={this.remove} />
         <div className="container todolist">
-          <form onSubmit={this.onSubmitAdd} className="field has-addons">
-            <div className="control is-expanded has-icons-left">
-              <input
-                className="input"
-                type="text"
-                placeholder="Name"
-                value={name}
-                onChange={e => this.updateName(e.target.value)}
-              />
-              <span className="icon is-small is-left">
-                <i className="fas fa-pen" />
-              </span>
-            </div>
-            <div className="control">
-              <button disabled={!name} className="button is-primary">
-                <span className="icon is-small">
-                  <i className="fas fa-check" />
-                </span>
-                <span>add</span>
-              </button>
-            </div>
-          </form>
 
           <table className="table is-fullwidth is-striped is-hoverable">
             <thead>
@@ -84,7 +25,7 @@ class TodoList extends Component {
               </tr>
             </thead>
             <tbody>
-              {list.map(todo => {
+              {this.props.todos.map(todo => {
                 return (
                   <tr key={todo.id}>
                     <td className="has-text-centered">
