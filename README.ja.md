@@ -3,6 +3,7 @@
 # next-todo
 
 [Next.js](https://nextjs.org/)を用いた Todo リスト管理のサンプルアプリケーション
+[nuxt-todo](https://github.com/nemolize/nuxt-todo)の`Nuxt.js` での実装
 
 Demo:
 https://next-example-todo.now.sh/
