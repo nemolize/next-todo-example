@@ -4,7 +4,7 @@ import TodoList from '../components/todo-list'
 
 const Home = () => (
   <>
-    <Head title="Home" />
+    <Head title="next-todo" />
 
     <section className="container">
       <div>
