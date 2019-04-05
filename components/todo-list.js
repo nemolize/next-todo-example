@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const TodoList = ({ todos, onToggle, onClickRemove }) => (
   <>
     <div className="container todolist">
@@ -44,4 +42,3 @@ export const TodoList = ({ todos, onToggle, onClickRemove }) => (
     </div>
   </>
 )
-

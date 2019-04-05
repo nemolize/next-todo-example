@@ -1,4 +1,3 @@
-import React from 'react'
 import App from 'next/app'
 import '../styles/global.scss'
 import '@fortawesome/fontawesome-free/js/fontawesome.min'
