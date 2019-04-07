@@ -1,6 +1,12 @@
-import React from 'react'
-import { array, func } from 'prop-types'
-export const TodoList = ({ todos, onToggle, onClickRemove }) => (
+import { Todo } from '../types/todo'
+
+export type PropTypes = {
+  todos: Todo[]
+  onToggle: (id: number) => void
+  onClickRemove: (todo: Todo) => void
+}
+
+export const TodoList = ({ todos, onToggle, onClickRemove }: PropTypes) => (
   <>
     <table className="table is-fullwidth is-striped is-hoverable">
       <thead>
@@ -42,9 +48,3 @@ export const TodoList = ({ todos, onToggle, onClickRemove }) => (
     </table>
   </>
 )
-
-TodoList.propTypes = {
-  todos: array,
-  onToggle: func,
-  onClickRemove: func
-}

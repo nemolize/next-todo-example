@@ -1,16 +1,16 @@
-import React from 'react'
+import { useRef, useState } from 'react'
 import { Head } from '../components/head'
 import { TodoList } from '../components/todo-list'
-import { DeleteModal } from '../components/delete-modal'
+import { DeleteModal, DeleteModalRef } from '../components/delete-modal'
 import { TodoAdd } from '../components/todo-add'
 
 export default () => {
-  const [list, setList] = React.useState([
+  const [list, setList] = useState([
     { id: 1, done: true, name: 'Buy a milk for my boss' },
-    { id: 2, done: false, name: 'Send a mail to a client' }
+    { id: 2, done: false, name: 'Send a mail to a client' },
   ])
 
-  const [counter, setCounter] = React.useState(3)
+  const [counter, setCounter] = useState(3)
 
   const add = name => {
     setList(list.concat({ id: counter, name, done: false }))
@@ -26,7 +26,7 @@ export default () => {
     setList(newList)
   }
 
-  let deleteModalRef = React.useRef()
+  let deleteModalRef = useRef<DeleteModalRef>()
 
   return (
     <>

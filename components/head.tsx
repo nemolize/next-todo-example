@@ -1,12 +1,17 @@
-import React from 'react'
 import NextHead from 'next/head'
-import { string } from 'prop-types'
 
 const defaultDescription = ''
 const defaultOGURL = ''
 const defaultOGImage = ''
 
-export const Head = props => (
+export type HeadProps = {
+  title?: string
+  description?: string
+  url?: string
+  ogImage?: string
+}
+
+export const Head = (props: HeadProps) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>
@@ -33,10 +38,3 @@ export const Head = props => (
     <meta property="og:image:height" content="630" />
   </NextHead>
 )
-
-Head.propTypes = {
-  title: string,
-  description: string,
-  url: string,
-  ogImage: string
-}
