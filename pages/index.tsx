@@ -5,6 +5,15 @@ import { DeleteModal, DeleteModalRef } from '../components/delete-modal'
 import { TodoAdd } from '../components/todo-add'
 import { Todo } from '../types/todo'
 
+export const STORAGE_KEY = 'todos'
+export const INITIAL_STATE: IndexState = {
+  list: [
+    { id: 1, done: true, name: 'Buy a milk for my boss' },
+    { id: 2, done: false, name: 'Send a mail to a client' },
+  ],
+  counter: 3,
+}
+
 export interface IndexProps {
   state?: IndexState
 }
@@ -14,45 +23,55 @@ export interface IndexState {
   counter: number
 }
 
-class IndexPage extends Component {
-  props: IndexProps
-  state: IndexState
-
+class IndexPage extends Component<IndexProps, IndexState> {
   constructor(props) {
     super(props)
-    this.state = this.initialState
   }
 
-  get initialState(): IndexState {
-    return {
-      list: [
-        { id: 1, done: true, name: 'Buy a milk for my boss' },
-        { id: 2, done: false, name: 'Send a mail to a client' },
-      ],
-      counter: 3,
-    }
+  componentDidMount(): void {
+    this.setState(() => this.initialState)
   }
 
-  get list() {
-    return this.state.list
+  private get initialState(): IndexState {
+    return this.localStorage || INITIAL_STATE
   }
-  get counter() {
-    return this.state.counter
+
+  private get localStorage(): IndexState | null {
+    const jsonString = localStorage.getItem(STORAGE_KEY)
+    return jsonString ? JSON.parse(jsonString) : null
   }
-  setList = (list: Todo[]) => this.setState(state => ({ ...state, list }))
-  setCounter = counter => this.setState(state => ({ ...state, counter }))
+
+  private set localStorage(state: IndexState) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+  }
+
   add = name => {
-    this.setList(
-      this.state.list.concat({ id: this.counter, name, done: false })
+    this.setState(
+      (state: IndexState) => ({
+        ...state,
+        list: state.list.concat({ id: state.counter, name, done: false }),
+        counter: state.counter + 1,
+      }),
+      () => (this.localStorage = this.state)
     )
-    this.setCounter(this.counter + 1)
   }
-  remove = todo => this.setList(this.list.filter(({ id }) => id !== todo.id))
+  remove = todo => {
+    this.setState(
+      state => ({
+        ...state,
+        list: state.list.filter(({ id }) => id !== todo.id),
+      }),
+      () => (this.localStorage = this.state)
+    )
+  }
   toggle = id => {
-    const newList = [...this.list]
+    const newList = [...this.state.list]
     const target = newList.find(todo => todo.id === id)
     if (!!target) target.done = !target.done
-    this.setList(newList)
+    this.setState(
+      state => ({ ...state, list: newList }),
+      () => (this.localStorage = this.state)
+    )
   }
 
   deleteModalRef = createRef<DeleteModalRef>()
@@ -61,29 +80,33 @@ class IndexPage extends Component {
   render() {
     return (
       <>
-        <Head title="next-todo" />
-        <section className="hero">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">
-                <i className="fa fa-clipboard-list" />
-                <span className="pl-1">next-todo</span>
-              </h1>
-              <h2 className="subtitle">
-                A todo list manager made with Next.js
-              </h2>
-            </div>
-          </div>
-        </section>
-        <section className="container">
-          <TodoAdd onAdd={this.add} />
-          <TodoList
-            todos={this.list}
-            onToggle={this.toggle}
-            onClickRemove={this.showModal}
-          />
-        </section>
-        <DeleteModal ref={this.deleteModalRef} onRemove={this.remove} />
+        {this.state && (
+          <>
+            <Head title="next-todo" />
+            <section className="hero">
+              <div className="hero-body">
+                <div className="container">
+                  <h1 className="title">
+                    <i className="fa fa-clipboard-list" />
+                    <span className="pl-1">next-todo</span>
+                  </h1>
+                  <h2 className="subtitle">
+                    A todo list manager made with Next.js
+                  </h2>
+                </div>
+              </div>
+            </section>
+            <section className="container">
+              <TodoAdd onAdd={this.add} />
+              <TodoList
+                todos={this.state.list}
+                onToggle={this.toggle}
+                onClickRemove={this.showModal}
+              />
+            </section>
+            <DeleteModal ref={this.deleteModalRef} onRemove={this.remove} />
+          </>
+        )}
       </>
     )
   }

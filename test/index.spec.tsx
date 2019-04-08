@@ -1,4 +1,4 @@
-import IndexPage, { IndexState } from '../pages'
+import IndexPage, { IndexState, INITIAL_STATE, STORAGE_KEY } from '../pages'
 import { shallow, ShallowWrapper } from 'enzyme'
 import { TodoList } from '../components/todo-list'
 
@@ -7,17 +7,26 @@ const initialState: IndexState = {
   counter: 2,
 }
 
-describe('Home', () => {
+describe('IndexPage', () => {
   let wrapper: ShallowWrapper
   let instance: IndexPage
+
+  afterAll(() => localStorage.removeItem(STORAGE_KEY))
+
   beforeEach(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(initialState))
     wrapper = shallow(<IndexPage />)
     instance = wrapper.instance() as IndexPage
-    instance.setState(JSON.parse(JSON.stringify(initialState)))
   })
 
   test('should render', () => {
     expect(wrapper.exists()).toBeTruthy()
+  })
+
+  test('should generate initial state if LocalHistory value does not exist', () => {
+    localStorage.removeItem(STORAGE_KEY)
+    Object.assign(INITIAL_STATE, { list: [], counter: 1 })
+    expect(shallow(<IndexPage />).state()).toEqual({ list: [], counter: 1 })
   })
 
   test('should pass list to TodoList', () => {
