@@ -10,14 +10,14 @@ https://next-example-todo.now.sh/
 
 ##### Features
 
-- You can `add` and `delete` a todo item, or `toggle` by clicking checkbox.
+- You can `add` or `delete` todo items, and `toggle` by clicking checkbox.
 - `Modal dialog` is implemented for confirming on item deletion.
 - `React Hooks` is used for state control.
-- Not like [nuxt-todo](https://github.com/nemolize/nuxt-todo) localStorage storing has not been implemented yet.
+- Persisting data to `LocalStorage`
 
 ##### Others
 
-- While this application is intended to be an example of Next.js, [TypeScript](https://www.typescriptlang.org/) is not used.
+- [TypeScript](https://www.typescriptlang.org/) is used currently, but typescript support will be removed as an example of plane Next.js project.
 - [Bulma](http://bulma.io) for styling
   - `TodoList` component uses variable of `bulma` with `@import`
 - [now](https://zeit.co/now) for demo site deploy
