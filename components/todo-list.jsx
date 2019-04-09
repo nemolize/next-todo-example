@@ -1,12 +1,7 @@
-import { Todo } from '../types/todo'
-import { Component } from 'react'
+import React, { Component } from 'react'
+import { array, func } from 'prop-types'
 
-export type TodoListProps = {
-  todos: Todo[]
-  onToggle: (id: number) => void
-  onClickRemove: (todo: Todo) => void
-}
-export class TodoList extends Component<TodoListProps> {
+export class TodoList extends Component {
   render() {
     let { todos, onToggle, onClickRemove } = this.props
     return (
@@ -50,4 +45,9 @@ export class TodoList extends Component<TodoListProps> {
       </>
     )
   }
+}
+TodoList.propTypes = {
+  todos: array,
+  onToggle: func,
+  onClickRemove: func,
 }

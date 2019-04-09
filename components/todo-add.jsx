@@ -1,8 +1,7 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { func } from 'prop-types'
 
-export type TodoAddProps = { onAdd: (name: string) => void }
-
-export const TodoAdd = (props: TodoAddProps) => {
+export const TodoAdd = props => {
   const [name, setName] = useState('')
   const onSubmit = e => {
     e.preventDefault()
@@ -35,3 +34,5 @@ export const TodoAdd = (props: TodoAddProps) => {
     </form>
   )
 }
+
+TodoAdd.propTypes = { onAdd: func }
