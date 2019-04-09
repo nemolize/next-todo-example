@@ -17,7 +17,7 @@ https://next-example-todo.now.sh/
 
 ##### Others
 
-- [TypeScript](https://www.typescriptlang.org/) is used currently, but typescript support will be removed as an example of plane Next.js project.
+- While this application is intended to be an example of Nuxt.js, [TypeScript](https://www.typescriptlang.org/) is not used.
 - [Bulma](http://bulma.io) for styling
   - `TodoList` component uses variable of `bulma` with `@import`
 - [now](https://zeit.co/now) for demo site deploy

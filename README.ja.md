@@ -9,7 +9,6 @@ Demo:
 https://next-example-todo.now.sh/
 
 ##### 特徴
-
 - 機能は Todo アイテムの `追加` と `削除` 及び `完了トグル`
 - コンポーネント間通信方法の実装例として、削除時の確認用 `モーダルダイアログ` の実装を行った。
 - 全て`Function Component`として実装しステート管理は `React Hooks` を利用して行っている。
@@ -17,8 +16,7 @@ https://next-example-todo.now.sh/
 
 ##### その他
 
-- [TypeScript](https://www.typescriptlang.org/)を実験的に導入しているが
-   `Next.js`のサンプルとして`Vanilla Next.js`の実装に戻す予定
+- `Nuxt.js`のサンプルとしての立ち位置を重視し[TypeScript](https://www.typescriptlang.org/)は導入せず、Vanilla Next.jsでの実装とした。
 - スタイル定義に[Bulma](http://bulma.io)を利用している
 - デモサイトのデプロイに[now](https://zeit.co/now)を利用している
 - CI/CD に[CircleCI](https://circleci.com)を利用している
