@@ -4,7 +4,7 @@ module.exports = {
   setupFiles: ['<rootDir>/jest.setup.js'],
   testRegex: TEST_REGEX,
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.[jt]sx?$': 'babel-jest',
   },
   testPathIgnorePatterns: ['<rootDir>/.next/','<rootDir>/out/', '<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
