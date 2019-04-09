@@ -1,11 +1,11 @@
+import React from 'react'
 import { TodoList } from './todo-list'
-import { shallow, ShallowWrapper } from 'enzyme'
-import { Todo } from '../types/todo'
+import { shallow } from 'enzyme'
 
-const dummyTodos: Todo[] = [{ id: 1, name: 'dummyTodo', done: false }]
+const dummyTodos = [{ id: 1, name: 'dummyTodo', done: false }]
 
 describe('TodoList', () => {
-  let wrapper: ShallowWrapper<TodoList['props'], {}, TodoList>
+  let wrapper
   const onToggleSpy = jest.fn()
   const onClickRemoveSpy = jest.fn()
 

@@ -1,22 +1,23 @@
-import IndexPage, { IndexState, INITIAL_STATE, STORAGE_KEY } from '../pages'
-import { shallow, ShallowWrapper } from 'enzyme'
+import React from 'react'
+import IndexPage, { INITIAL_STATE, STORAGE_KEY } from '../pages'
+import { shallow } from 'enzyme'
 import { TodoList } from '../components/todo-list'
 
-const initialState: IndexState = {
+const initialState = {
   list: [{ id: 1, done: false, name: 'initial todo' }],
   counter: 2,
 }
 
 describe('IndexPage', () => {
-  let wrapper: ShallowWrapper
-  let instance: IndexPage
+  let wrapper
+  let instance
 
   afterAll(() => localStorage.removeItem(STORAGE_KEY))
 
   beforeEach(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(initialState))
     wrapper = shallow(<IndexPage />)
-    instance = wrapper.instance() as IndexPage
+    instance = wrapper.instance()
   })
 
   test('should render', () => {
