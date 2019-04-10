@@ -9,7 +9,6 @@ describe('TodoList', () => {
   const onToggleSpy = jest.fn()
   const onClickRemoveSpy = jest.fn()
 
-  wrapper = shallow<TodoList>(<div />)
   beforeEach(() => {
     wrapper = shallow(
       <TodoList
