@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/nemolize/next-todo/tree/master.svg?style=svg)](https://circleci.com/gh/nemolize/next-todo/tree/master)
 [![codecov](https://codecov.io/gh/nemolize/next-todo/branch/master/graph/badge.svg)](https://codecov.io/gh/nemolize/next-todo)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
 # next-todo
 
