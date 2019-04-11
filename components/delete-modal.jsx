@@ -1,16 +1,14 @@
 import { func } from 'prop-types'
 import React, { forwardRef, useState } from 'react'
 
-export const DeleteModal = forwardRef((props, ref) => {
-  const { onRemove } = props
+export const DeleteModal = forwardRef(({ onRemove }, ref) => {
   const [removeTarget, setRemoveTarget] = useState(null)
-  const show = todo => setRemoveTarget(todo)
   const clear = () => setRemoveTarget(null)
   const remove = () => {
     onRemove(removeTarget)
-    clear()
+    setRemoveTarget(null)
   }
-  ref.current = { show }
+  ref.current = { show: setRemoveTarget }
 
   return (
     <>
