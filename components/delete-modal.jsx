@@ -49,3 +49,4 @@ export const DeleteModal = forwardRef(({ onRemove }, ref) => {
 DeleteModal.propTypes = {
   onRemove: func,
 }
+DeleteModal.displayName = 'DeleteModal'
