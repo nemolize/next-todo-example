@@ -2,7 +2,7 @@ version: 2
 
 defaults: &defaults
   docker:
-  - image: node:lts-alpine
+  - image: node:10.19.0-alpine3.11
 
 _steps:
   - &save_cache_node_modules
