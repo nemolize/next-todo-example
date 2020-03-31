@@ -51,7 +51,7 @@ jobs:
       - deploy:
           command: |
             npm config set unsafe-perm true # https://goo.gl/LH2aMY
-            npx now alias -t ${NOW_TOKEN} $(npx now -n next-todo -t ${NOW_TOKEN} out) next-example-todo.now.sh
+            npx netlify-cli deploy --dir=out --auth $NETLIFY_TOKEN --site $NETLIFY_SITE_ID
 
 workflows:
   version: 2
