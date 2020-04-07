@@ -1,10 +1,9 @@
-name: Check and deploy draft
+name: production
 
 on:
   push:
     branches:
-      - '**'
-      - '!master'
+      - master
 
 jobs:
   check:
@@ -29,8 +28,9 @@ jobs:
 
       - run: yarn lint
       - run: yarn test
+
       - run: yarn build
-      - run: yarn netlify deploy --dir=./out
+      - run: yarn netlify deploy --prod --dir=./out
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
