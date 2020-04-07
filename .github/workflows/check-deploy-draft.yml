@@ -1,6 +1,10 @@
 name: Check and deploy draft
 
-on: push
+on:
+  push:
+    branches:
+      - '**'
+      - '!master'
 
 jobs:
   check:
@@ -25,38 +29,7 @@ jobs:
 
       - run: yarn lint
       - run: yarn test
-  build:
-    runs-on: ubuntu-18.04
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 10.19.0
-
-      - name: cache node_modules
-        uses: actions/cache@v1
-        with:
-          id: node_modules
-          path: node_modules
-          key: app-yarn-${{ hashFiles('**\yarn.lock') }}
-          restore-keys: app-yarn-${{ hashFiles('**\yarn.lock') }}
       - run: yarn build
-
-      - name: Upload build output to deploy
-        uses: actions/upload-artifact@v1
-        with:
-          name: out
-          path: out
-  deploy:
-    needs: build
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Downolad build output to deploy
-        uses: actions/download-artifact@v1
-        with:
-          name: out
-
       - run: yarn netlify-cli deploy --dir=./out
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
