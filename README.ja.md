@@ -8,7 +8,7 @@
 [nuxt-todo](https://github.com/nemolize/nuxt-todo)の`Nuxt.js` での実装
 
 Demo:
-https://next-example-todo.now.sh/
+https://next-todo.netlify.com
 
 ##### 特徴
 - 機能は Todo アイテムの `追加` と `削除` 及び `完了トグル`
@@ -20,7 +20,7 @@ https://next-example-todo.now.sh/
 
 - `Nuxt.js`のサンプルとしての立ち位置を重視し[TypeScript](https://www.typescriptlang.org/)は導入せず、Vanilla Next.jsでの実装とした。
 - スタイル定義に[Bulma](http://bulma.io)を利用している
-- デモサイトのデプロイに[now](https://zeit.co/now)を利用している
+- デモサイトのデプロイに[Netlify](https://www.netlify.com/)を利用している
 - CI/CD に[GitHub Actions](https://github.co.jp/features/actions)を利用している
 
 ## クローン
@@ -32,14 +32,14 @@ git clone git@github.com:nemolize/next-todo.git && cd next-todo
 ## ビルド
 
 ```bash
-# install dependencies
-$ yarn install
+# 依存関係のインストール
+$ yarn
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+# localhost:3000 で起動
+$ yarn dev
 
-# generate static project
-$ yarn run build
+# ビルドして静的ファイルにエクスポート
+$ yarn build
 ```
 
 ## デプロイ

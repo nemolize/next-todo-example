@@ -8,12 +8,12 @@ A todo list manager example made with [Next.js](https://nextjs.org/).
 `Next.js` version of [nuxt-todo](https://github.com/nemolize/nuxt-todo) implementatoin.
 
 Demo:
-https://next-example-todo.now.sh/
+https://next-todo.netlify.com
 
 ##### Features
 
 - You can `add` or `delete` todo items, and `toggle` by clicking checkbox.
-- `Modal dialog` is implemented for confirming on item deletion.
+- `Modal dialog` for item delete confirm.
 - `React Hooks` is used for state control.
 - Persisting data to `LocalStorage`
 
@@ -22,7 +22,7 @@ https://next-example-todo.now.sh/
 - While this application is intended to be an example of Nuxt.js, [TypeScript](https://www.typescriptlang.org/) is not used.
 - [Bulma](http://bulma.io) for styling
   - `TodoList` component uses variable of `bulma` with `@import`
-- [now](https://zeit.co/now) for demo site deploy
+- [Netlify](https://www.netlify.com/) for demo site deploy
 - [GitHub Actions](https://github.com/features/actions) for CI/CD
 
 ## Clone
