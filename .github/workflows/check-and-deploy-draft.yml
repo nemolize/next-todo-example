@@ -57,7 +57,7 @@ jobs:
         with:
           name: out
 
-      - run: npx netlify-cli deploy --dir=./out
+      - run: yarn netlify-cli deploy --dir=./out
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
