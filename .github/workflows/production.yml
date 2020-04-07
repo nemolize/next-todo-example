@@ -1,0 +1,36 @@
+name: production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  check:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.19.0
+
+      - name: cache node_modules
+        uses: actions/cache@v1
+        with:
+          id: node_modules
+          path: node_modules
+          key: app-yarn-${{ hashFiles('**\yarn.lock') }}
+          restore-keys: app-yarn-${{ hashFiles('**\yarn.lock') }}
+
+      - run: yarn
+        if: steps.node_modules.outputs.cache-hit != 'true'
+
+      - run: yarn lint
+      - run: yarn test
+
+      - run: yarn build
+      - run: yarn netlify deploy --prod --dir=./out
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

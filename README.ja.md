@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/nemolize/next-todo/tree/master.svg?style=svg)](https://circleci.com/gh/nemolize/next-todo/tree/master)
+![](https://github.com/nemolize/next-todo/workflows/production/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/nemolize/next-todo/branch/master/graph/badge.svg)](https://codecov.io/gh/nemolize/next-todo)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
@@ -21,7 +21,7 @@ https://next-example-todo.now.sh/
 - `Nuxt.js`のサンプルとしての立ち位置を重視し[TypeScript](https://www.typescriptlang.org/)は導入せず、Vanilla Next.jsでの実装とした。
 - スタイル定義に[Bulma](http://bulma.io)を利用している
 - デモサイトのデプロイに[now](https://zeit.co/now)を利用している
-- CI/CD に[CircleCI](https://circleci.com)を利用している
+- CI/CD に[GitHub Actions](https://github.co.jp/features/actions)を利用している
 
 ## クローン
 

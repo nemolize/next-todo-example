@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/nemolize/next-todo/tree/master.svg?style=svg)](https://circleci.com/gh/nemolize/next-todo/tree/master)
+![](https://github.com/nemolize/next-todo/workflows/production/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/nemolize/next-todo/branch/master/graph/badge.svg)](https://codecov.io/gh/nemolize/next-todo)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
@@ -23,7 +23,7 @@ https://next-example-todo.now.sh/
 - [Bulma](http://bulma.io) for styling
   - `TodoList` component uses variable of `bulma` with `@import`
 - [now](https://zeit.co/now) for demo site deploy
-- [CircleCI](https://circleci.com) for CI/CD
+- [GitHub Actions](https://github.com/features/actions) for CI/CD
 
 ## Clone
 
