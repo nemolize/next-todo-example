@@ -43,9 +43,3 @@ $ yarn dev
 # generate static project
 $ yarn build
 ```
-
-## Deploy
-
-```bash
-npx now out
-```
