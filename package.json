@@ -28,7 +28,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.22.0",
     "jest": "^26.6.3",
     "netlify-cli": "^2.40.0",
     "react-addons-test-utils": "^15.6.2",
