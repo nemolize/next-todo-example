@@ -1259,10 +1259,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@netlify/build@^9.2.0":
-  version "9.4.0"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-9.4.0.tgz#18ece0a6e38e8a97f089f408f9ebe96e976bf059"
-  integrity sha512-mgu+FRYBK74UF1LiV4D1W1th/BuBSSRZc0xQZoCbPuvz2gD4ZK3p2uf34CyzN8Va6CR+j0tMVpNU5uGNR9ic1g==
+"@netlify/build@^9.6.0":
+  version "9.7.1"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-9.7.1.tgz#253f68095066a9eb01bc1ac8ea9d4ba7c0aeda98"
+  integrity sha512-cgun1IhO0Ee/5oC+zVxin/+Lu9NIG2/a6Niwg7eq2YgA0UyWC3mpM7iMsplwzKBDaNzurWYDtQUf1zWUVj4N0w==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^1.0.7"
@@ -1272,7 +1272,7 @@
     "@netlify/plugin-edge-handlers" "^1.11.5"
     "@netlify/plugins-list" "^2.2.0"
     "@netlify/run-utils" "^1.0.6"
-    "@netlify/zip-it-and-ship-it" "^2.4.0"
+    "@netlify/zip-it-and-ship-it" "^2.4.3"
     "@sindresorhus/slugify" "^1.1.0"
     "@ungap/from-entries" "^0.2.1"
     array-flat-polyfill "^1.0.1"
@@ -1459,10 +1459,10 @@
     "@netlify/traffic-mesh-agent-linux-x64" "^0.27.10"
     "@netlify/traffic-mesh-agent-win32-x64" "^0.27.10"
 
-"@netlify/zip-it-and-ship-it@^2.1.3", "@netlify/zip-it-and-ship-it@^2.3.0", "@netlify/zip-it-and-ship-it@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-2.4.0.tgz#1f85222c7560fffdf3ef18e045c3a80f15ecdf52"
-  integrity sha512-ApuQqnm5x97mFaUEQmmkogcH3MtvPmX1W6MI3Yp4pBXBtRjqTbkrUOiEq97mNnvRR3zEvR8kTLOY7Hd7lAL4bQ==
+"@netlify/zip-it-and-ship-it@^2.1.3", "@netlify/zip-it-and-ship-it@^2.4.1", "@netlify/zip-it-and-ship-it@^2.4.2", "@netlify/zip-it-and-ship-it@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@netlify/zip-it-and-ship-it/-/zip-it-and-ship-it-2.4.3.tgz#a42cb3501d95d60662366cec2bdc7f3e2ab8ce94"
+  integrity sha512-V/r86XX+kqFtKaT6gL0LppZUABhvfYTMokSK+SxwSXCEzd8l6eEhc8fWkidJgnUmyEZJk2M79iqqgyexuwYlCw==
   dependencies:
     archiver "^4.0.0"
     array-flat-polyfill "^1.0.1"
@@ -9525,17 +9525,17 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-cli@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-3.10.0.tgz#87e0c0d4d10904a819d90679b9d71b417c228aa5"
-  integrity sha512-WGgQYCHJ4/J1qe+uAckphmgBfB1WP3usFfa/9TBWAHfNMtvwwZX3JeIzjWxG7t+v89nwCCR/y0ZN93Z427fWNw==
+netlify-cli@^3.10.4:
+  version "3.10.4"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-3.10.4.tgz#f3f4da62eb3c355426728bad6cb11bd4d1dbd11d"
+  integrity sha512-THMSTm8kXIn3uOMRhxI/2NOLG31PnkHemDV2smte/KMtgg0U9wl+Czs/GeTJN8EMQo/TGCqC1On3ocXk3idKdg==
   dependencies:
-    "@netlify/build" "^9.2.0"
+    "@netlify/build" "^9.6.0"
     "@netlify/config" "^4.0.2"
     "@netlify/framework-info" "^2.3.0"
     "@netlify/plugin-edge-handlers" "^1.11.5"
     "@netlify/traffic-mesh-agent" "^0.27.10"
-    "@netlify/zip-it-and-ship-it" "^2.3.0"
+    "@netlify/zip-it-and-ship-it" "^2.4.1"
     "@oclif/command" "^1.6.1"
     "@oclif/config" "^1.15.1"
     "@oclif/errors" "^1.3.4"
@@ -9595,7 +9595,7 @@ netlify-cli@^3.10.0:
     memoize-one "^5.1.1"
     minimist "^1.2.5"
     multiparty "^4.2.1"
-    netlify "^6.1.9"
+    netlify "^6.1.10"
     netlify-redirect-parser "^3.0.3"
     netlify-redirector "^0.2.1"
     node-fetch "^2.6.0"
@@ -9652,13 +9652,13 @@ netlify-redirector@^0.2.1:
   resolved "https://registry.yarnpkg.com/netlify-redirector/-/netlify-redirector-0.2.1.tgz#efdb761ea2c52edb3ecb5f237db0e10861f2ff0e"
   integrity sha512-17vDR9p1Loanp+vd57y+b6WlKb5X+qb0LZ44oTYsKJbdonz4Md+Ybv1lzH1w1aKm5YWWXHR8LMpWyY9bjlAJKw==
 
-netlify@^6.0.0, netlify@^6.1.9:
-  version "6.1.9"
-  resolved "https://registry.yarnpkg.com/netlify/-/netlify-6.1.9.tgz#03e6f003843efc27242da8b573bd9ea36e283107"
-  integrity sha512-+t/yyPusR0/bwB/IQPT5mcwe3erlS+x8rBy006f1Gu2WsbUHpI20/Qyz0h3SJ4m7sSqeDVTVidFqQjbxMLKb0w==
+netlify@^6.0.0, netlify@^6.1.10:
+  version "6.1.11"
+  resolved "https://registry.yarnpkg.com/netlify/-/netlify-6.1.11.tgz#97007c1d052542345399e9245f93f7c71cef7baa"
+  integrity sha512-+JUcdO2L/J6VmJZ4xpioJ9m3Cgz6zSGQHSGJT1hbLQutUD5XgXUfdy1mtHJqbqTsbUwcrQUMrB50KpK2yVd3LA==
   dependencies:
     "@netlify/open-api" "^1.3.0"
-    "@netlify/zip-it-and-ship-it" "^2.3.0"
+    "@netlify/zip-it-and-ship-it" "^2.4.2"
     backoff "^2.5.0"
     clean-deep "^3.4.0"
     flush-write-stream "^2.0.0"
