@@ -17,10 +17,9 @@ jobs:
         with:
           node-version: ${{ steps.nodenv.outputs.node-version }}
 
-      - name: cache node_modules
+      - id: node_modules
         uses: actions/cache@v2
         with:
-          id: node_modules
           path: node_modules
           key: app-yarn-${{ hashFiles('yarn.lock') }}
           restore-keys: app-yarn-${{ hashFiles('yarn.lock') }}
