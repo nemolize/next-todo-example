@@ -32,7 +32,10 @@ jobs:
       - run: yarn test
 
       - run: yarn build
-      - run: yarn netlify deploy --prod --dir=./out
+      - uses: nwtgck/actions-netlify@v1
+        with:
+          publish-dir: './out'
+          production-branch: master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
