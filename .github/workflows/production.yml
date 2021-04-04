@@ -17,15 +17,7 @@ jobs:
         with:
           node-version: ${{ steps.nodenv.outputs.node-version }}
 
-      - id: node_modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: app-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: app-yarn-${{ hashFiles('yarn.lock') }}
-
-      - run: yarn
-        if: steps.node_modules.outputs.cache-hit != 'true'
+      - uses: bahmutov/npm-install@v1
 
       - run: yarn lint
       - run: yarn test
