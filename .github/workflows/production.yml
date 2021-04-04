@@ -11,12 +11,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.5
+      - id: nodenv
+        uses: nodenv/actions/node-version@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 10.19.0
+          node-version: ${{ steps.nodenv.outputs.node-version }}
 
       - name: cache node_modules
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2
         with:
           id: node_modules
           path: node_modules
