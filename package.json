@@ -30,7 +30,7 @@
     "eslint": "^7.25.0",
     "eslint-plugin-react": "^7.23.2",
     "jest": "^26.6.3",
-    "netlify-cli": "^3.26.1",
+    "netlify-cli": "^4.1.18",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.14.0"
   }
