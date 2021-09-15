@@ -1314,10 +1314,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@netlify/build@^18.7.3":
-  version "18.7.3"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-18.7.3.tgz#c15b21d55ab66d095e78b842317527344702d63c"
-  integrity sha512-H3Fpyk4u8D8uV2u0ebzmI8aT58rJlTSB8Xt9W/7RXMh1ZKTyhKcnJNhhfXZtMyhfAb6PLrOFEuJkIfIRONqPRg==
+"@netlify/build@^18.9.0":
+  version "18.9.0"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-18.9.0.tgz#a1a6df3e4c2b0d37c7c58b37d47415071dc2d8c9"
+  integrity sha512-HpqGuTzftCA//HrcZo9EDs5pbjGWKOGVgJGpq1pbjFrBmc2p7DH33VxbAE5lMBpEBfBgoUozGS9VCgthAqSz5A==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^2.0.0"
@@ -1337,7 +1337,7 @@
     execa "^5.1.1"
     figures "^3.2.0"
     filter-obj "^2.0.1"
-    got "^9.6.0"
+    got "^10.0.0"
     indent-string "^4.0.0"
     is-plain-obj "^3.0.0"
     js-yaml "^4.0.0"
@@ -1389,10 +1389,10 @@
     path-exists "^4.0.0"
     readdirp "^3.4.0"
 
-"@netlify/config@^15.0.0", "@netlify/config@^15.5.1":
-  version "15.5.1"
-  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-15.5.1.tgz#8805a782935033672816b7da8025a57c8431abc2"
-  integrity sha512-KjXgfIl4AtnFpUZswGRNAt1+RP8wyDlUG/KX28hCwjhaShaPirex/Z5Lo3kvVz1uQxCUBv2s82VR84iogzgGwQ==
+"@netlify/config@^15.0.0", "@netlify/config@^15.6.2":
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-15.6.2.tgz#537ae4ec75ed31e0cd37a221549b99c049589d91"
+  integrity sha512-wFZ2sLg/NaU0kQC8EnxdMUrr3rMWC8CQnBedQsxRW2dmQKQgW4tsCqUVy2U++iu2FTZkh8CwYo8W0qCPoel4lA==
   dependencies:
     "@ungap/from-entries" "^0.2.1"
     array-flat-polyfill "^1.0.1"
@@ -1572,35 +1572,35 @@
   resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-3.6.0.tgz#5003b983ba2c35982dddbb129d8c1cc2054479a1"
   integrity sha512-yRgsmBw8Wzk6/I/afcerhC+3XtVxXUF0xrSMOYgxV0bmaKJmB/0StJG4FY9TOAmb/IzCp82mR/63ZpzwIvpVzw==
 
-"@netlify/routing-local-proxy-darwin-arm64@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-darwin-arm64/-/routing-local-proxy-darwin-arm64-0.31.0.tgz#22eecb69ba4beb8f54800c67bafc01dac0166cc7"
-  integrity sha512-nKBxaLuWRJQO+Tcrv4T2BNq4xi4DDb3VpdSY/X8Ke/rm4YTBagbjQj64eJ/yzFj3QMw/PJzEbiZ7A3gbzq3xQw==
+"@netlify/routing-local-proxy-darwin-arm64@^0.33.1":
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-darwin-arm64/-/routing-local-proxy-darwin-arm64-0.33.1.tgz#0095fb6e1c11b63338199992068cbf985eda80c0"
+  integrity sha512-vkWo0newQCHGJvsq9mZQnRNMdb3tNOOWELctOf/3zQE/QxSSnmm687Thj5zvAR1TExW4jhT47z6+GquRHKiZpg==
 
-"@netlify/routing-local-proxy-darwin-x64@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-darwin-x64/-/routing-local-proxy-darwin-x64-0.31.0.tgz#208e97d6cfe1f155f0b0aa55dc6398c5383ecf02"
-  integrity sha512-wkI8PcsFWQoZZIe6Xb+mHSMFpH4cawX0+Z9bNQ7OX9azlQrmUXmQ395ax39rR2f+c0sg/Hqnoh/OJBeuaqbiew==
+"@netlify/routing-local-proxy-darwin-x64@^0.33.1":
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-darwin-x64/-/routing-local-proxy-darwin-x64-0.33.1.tgz#0e3a4b1f3ad87fd8028f439b9c1645db77688db4"
+  integrity sha512-67yJPgGcsC7y18B9hcefWnX46xIL4C6lxIeX14CuX8Atzsrv7FDgbkiEI4ulNXa4Ilup+RxI1dNHNZgCt3JYiA==
 
-"@netlify/routing-local-proxy-linux-x64@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-linux-x64/-/routing-local-proxy-linux-x64-0.31.0.tgz#ab4ed55d4a0f47468c30bd405d1ff3968c9cbe6f"
-  integrity sha512-Jr9Tpz+bOEksokGM//ORO7D3T0vmkpnutRbHL/cDoXD13y8lJaEIscnzcSDYsaKtEruxwrxTS8PTmZ1U2LzCbg==
+"@netlify/routing-local-proxy-linux-x64@^0.33.1":
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-linux-x64/-/routing-local-proxy-linux-x64-0.33.1.tgz#c3617f51fa7bf4d258b2c95a851014499dc8d137"
+  integrity sha512-NYUuTXMqqek+oJheRGoMdpSg6/93BDNvV0wCzI546nugWJWNsnSazUoqvvIcWpZoGxYpAuInnJgz3jehbDvJRg==
 
-"@netlify/routing-local-proxy-win32-x64@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-win32-x64/-/routing-local-proxy-win32-x64-0.31.0.tgz#97bb06ae2fd7c06b8420ed4da02f000352bd5250"
-  integrity sha512-BF66RNC1C5bKjsYifOqi/LptkPtKZar/SrCoFRaIZrGaMkSs53g2CLFZN5f7t8926SF+rYWU8szQ1T7EAr+DUA==
+"@netlify/routing-local-proxy-win32-x64@^0.33.1":
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy-win32-x64/-/routing-local-proxy-win32-x64-0.33.1.tgz#2a366f192dea65f4cc24419423ea48be8fdada6b"
+  integrity sha512-lKHH9neE+pCqHuaZ56HDNBlulaOvOdQ1Tb6cAMa3cm0+8KLx3nTiSzDDN+FwRo5VqvWd8B+gT6NPj2hD4dfd+w==
 
-"@netlify/routing-local-proxy@^0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy/-/routing-local-proxy-0.31.0.tgz#08fefab688d7e392266c263db683b15b32732dd2"
-  integrity sha512-SSlWic9za/0QtfCP7GllJcOV98BWlx2goOF9bLLhmsHGiPfrhlhZfemqdMtKM4BIs+G70wzUqaIYeyjtxVh37A==
+"@netlify/routing-local-proxy@^0.33.1":
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/@netlify/routing-local-proxy/-/routing-local-proxy-0.33.1.tgz#1ada336637b3c0e69ab9fac878d8a361a54f376b"
+  integrity sha512-dx0lUZIkK9JOcqrO7QvtYAsL11qZjPEcY4IHS8vUp/QZg7VK/jKnQ9wvk3ITr+IYDqEx+qvKb3fEs8fQ5jBxQw==
   optionalDependencies:
-    "@netlify/routing-local-proxy-darwin-arm64" "^0.31.0"
-    "@netlify/routing-local-proxy-darwin-x64" "^0.31.0"
-    "@netlify/routing-local-proxy-linux-x64" "^0.31.0"
-    "@netlify/routing-local-proxy-win32-x64" "^0.31.0"
+    "@netlify/routing-local-proxy-darwin-arm64" "^0.33.1"
+    "@netlify/routing-local-proxy-darwin-x64" "^0.33.1"
+    "@netlify/routing-local-proxy-linux-x64" "^0.33.1"
+    "@netlify/routing-local-proxy-win32-x64" "^0.33.1"
 
 "@netlify/run-utils@^2.0.0":
   version "2.0.0"
@@ -7100,7 +7100,7 @@ gonzales-pe@^4.2.3:
   dependencies:
     minimist "^1.2.5"
 
-got@^10.7.0:
+got@^10.0.0, got@^10.7.0:
   version "10.7.0"
   resolved "https://registry.yarnpkg.com/got/-/got-10.7.0.tgz#62889dbcd6cca32cd6a154cc2d0c6895121d091f"
   integrity sha512-aWTDeNw9g+XqEZNcTjMMZSy7B7yE9toWOFYip7ofFTLleJhvZwUxxTxkTpKvF+p1SAA4VHmuEy7PiHTHyq8tJg==
@@ -9924,18 +9924,18 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-cli@^6.8.5:
-  version "6.8.5"
-  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-6.8.5.tgz#56489299c4862b37160852b345963bcc8cabd9e3"
-  integrity sha512-8flCVhyX04Ed22E1xLi80UtOBV/v8sMh42sa0tBRs5XiW83SlIi27I6BO+MLXtPbL+DwrAC27nUz9WY8ce21Fg==
+netlify-cli@^6.9.2:
+  version "6.9.2"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-6.9.2.tgz#8d5181c2c022d7c70eeecbcc6180de7f76e786ca"
+  integrity sha512-m7cQ2W6yM1K3AocCpUbmOIIatnfwb22STIKGDXKG1kLdkWD7EhFFI67AkxXwAEmebp5wSjLQyRZhSRO/7kUq9w==
   dependencies:
-    "@netlify/build" "^18.7.3"
-    "@netlify/config" "^15.5.1"
+    "@netlify/build" "^18.9.0"
+    "@netlify/config" "^15.6.2"
     "@netlify/framework-info" "^5.9.1"
     "@netlify/local-functions-proxy" "^1.1.1"
     "@netlify/plugin-edge-handlers" "^1.11.22"
     "@netlify/plugins-list" "^3.6.0"
-    "@netlify/routing-local-proxy" "^0.31.0"
+    "@netlify/routing-local-proxy" "^0.33.1"
     "@netlify/zip-it-and-ship-it" "4.20.0"
     "@oclif/command" "^1.6.1"
     "@oclif/config" "^1.15.1"
