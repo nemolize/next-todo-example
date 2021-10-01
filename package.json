@@ -20,7 +20,7 @@
     "@types/enzyme": "^3.10.9",
     "@types/jest": "^27.0.1",
     "@types/next": "^9.0.0",
-    "@types/react": "^17.0.19",
+    "@types/react": "^17.0.26",
     "@types/react-dom": "^17.0.9",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
