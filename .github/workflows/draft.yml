@@ -22,8 +22,8 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: node_modules
-          key: app-yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: app-yarn-${{ hashFiles('yarn.lock') }}
+          key: app-yarn-${{ hashFiles('.node-version') }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: app-yarn-
 
       - run: yarn
         if: steps.node_modules.outputs.cache-hit != 'true'
