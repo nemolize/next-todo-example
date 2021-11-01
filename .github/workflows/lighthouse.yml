@@ -1,7 +1,9 @@
 name: benchmark
 
 on:
-  push
+  workflow_run:
+    workflows: ["deploy production"]
+    types: [completed]
 
 jobs:
   lighthouse:
