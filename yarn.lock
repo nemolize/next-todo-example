@@ -13359,7 +13359,7 @@ __metadata:
     react-addons-test-utils: 15.6.2
     react-dom: 16.14.0
     react-test-renderer: 16.14.0
-    sass: ^1.49.7
+    sass: 1.49.7
   languageName: unknown
   linkType: soft
 
@@ -16451,7 +16451,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.49.7":
+"sass@npm:1.49.7":
   version: 1.49.7
   resolution: "sass@npm:1.49.7"
   dependencies:
