@@ -22,6 +22,8 @@ jobs:
         with:
           path: .yarn/cache
           key: app-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            app-yarn-
       - run: yarn
 
       - run: yarn lint
