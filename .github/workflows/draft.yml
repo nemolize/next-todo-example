@@ -18,15 +18,11 @@ jobs:
         with:
           node-version: ${{ steps.nodenv.outputs.node-version }}
 
-      - id: node_modules
-        uses: actions/cache@v2.1.7
+      - uses: actions/cache@v2.1.7
         with:
-          path: node_modules
-          key: app-yarn-${{ hashFiles('.node-version') }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: app-yarn-
-
+          path: .yarn/cache
+          key: app-yarn-${{ hashFiles('yarn.lock') }}
       - run: yarn
-        if: steps.node_modules.outputs.cache-hit != 'true'
 
       - run: yarn lint
       - run: yarn test
