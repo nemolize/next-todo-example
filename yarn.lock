@@ -2919,7 +2919,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/enzyme@npm:^3.10.11":
+"@types/enzyme@npm:3.10.11":
   version: 3.10.11
   resolution: "@types/enzyme@npm:3.10.11"
   dependencies:
@@ -3070,7 +3070,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/next@npm:^9.0.0":
+"@types/next@npm:9.0.0":
   version: 9.0.0
   resolution: "@types/next@npm:9.0.0"
   dependencies:
@@ -3131,7 +3131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.11":
+"@types/react-dom@npm:17.0.11":
   version: 17.0.11
   resolution: "@types/react-dom@npm:17.0.11"
   dependencies:
@@ -3140,7 +3140,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17.0.39":
+"@types/react@npm:*, @types/react@npm:17.0.39":
   version: 17.0.39
   resolution: "@types/react@npm:17.0.39"
   dependencies:
@@ -3480,7 +3480,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zeit/next-sass@npm:^1.0.1":
+"@zeit/next-sass@npm:1.0.1":
   version: 1.0.1
   resolution: "@zeit/next-sass@npm:1.0.1"
   dependencies:
@@ -4301,7 +4301,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-core@npm:^6.26.0, babel-core@npm:^6.26.3":
+"babel-core@npm:6.26.3, babel-core@npm:^6.26.0":
   version: 6.26.3
   resolution: "babel-core@npm:6.26.3"
   dependencies:
@@ -4328,7 +4328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-eslint@npm:^10.1.0":
+"babel-eslint@npm:10.1.0":
   version: 10.1.0
   resolution: "babel-eslint@npm:10.1.0"
   dependencies:
@@ -4370,6 +4370,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-jest@npm:27.1.0":
+  version: 27.1.0
+  resolution: "babel-jest@npm:27.1.0"
+  dependencies:
+    "@jest/transform": ^27.1.0
+    "@jest/types": ^27.1.0
+    "@types/babel__core": ^7.1.14
+    babel-plugin-istanbul: ^6.0.0
+    babel-preset-jest: ^27.0.6
+    chalk: ^4.0.0
+    graceful-fs: ^4.2.4
+    slash: ^3.0.0
+  peerDependencies:
+    "@babel/core": ^7.8.0
+  checksum: 93915872d97b360624650ac2c6ea642b27f39c54ec0fc5d933b13f158572b45109f7a7353d7c2c2ba44196a2e76abb7e068dfa437b3019fd178b8161a74b3729
+  languageName: node
+  linkType: hard
+
 "babel-jest@npm:^26.6.3":
   version: 26.6.3
   resolution: "babel-jest@npm:26.6.3"
@@ -4385,24 +4403,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 5917233f0d381e719e195b69b81e46da90293432d10288d79f8f59b8f3f9ac030e14701f3d9f90893fb739481df1d132446f1b983d841e65e2623775db100897
-  languageName: node
-  linkType: hard
-
-"babel-jest@npm:^27.1.0":
-  version: 27.1.0
-  resolution: "babel-jest@npm:27.1.0"
-  dependencies:
-    "@jest/transform": ^27.1.0
-    "@jest/types": ^27.1.0
-    "@types/babel__core": ^7.1.14
-    babel-plugin-istanbul: ^6.0.0
-    babel-preset-jest: ^27.0.6
-    chalk: ^4.0.0
-    graceful-fs: ^4.2.4
-    slash: ^3.0.0
-  peerDependencies:
-    "@babel/core": ^7.8.0
-  checksum: 93915872d97b360624650ac2c6ea642b27f39c54ec0fc5d933b13f158572b45109f7a7353d7c2c2ba44196a2e76abb7e068dfa437b3019fd178b8161a74b3729
   languageName: node
   linkType: hard
 
@@ -5064,7 +5064,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bulma@npm:^0.9.3":
+"bulma@npm:0.9.3":
   version: 0.9.3
   resolution: "bulma@npm:0.9.3"
   checksum: 98e1c2794b70c6339b41afc929bec6e22eae5b2751dc5fb0d9b7195d1c799ba4129a6fda1097e966db492f65fc4bed719da2498356c1ea6a9972f23ad3025d5c
@@ -7472,7 +7472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enzyme-adapter-react-16@npm:^1.15.6":
+"enzyme-adapter-react-16@npm:1.15.6":
   version: 1.15.6
   resolution: "enzyme-adapter-react-16@npm:1.15.6"
   dependencies:
@@ -7520,7 +7520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enzyme@npm:^3.11.0":
+"enzyme@npm:3.11.0":
   version: 3.11.0
   resolution: "enzyme@npm:3.11.0"
   dependencies:
@@ -7790,7 +7790,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.28.0":
+"eslint-plugin-react@npm:7.28.0":
   version: 7.28.0
   resolution: "eslint-plugin-react@npm:7.28.0"
   dependencies:
@@ -7857,7 +7857,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.32.0":
+"eslint@npm:7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -11537,7 +11537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^26.6.3":
+"jest@npm:26.6.3":
   version: 26.6.3
   resolution: "jest@npm:26.6.3"
   dependencies:
@@ -13331,7 +13331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"netlify-cli@npm:^8.16.1":
+"netlify-cli@npm:8.16.1":
   version: 8.16.1
   resolution: "netlify-cli@npm:8.16.1"
   dependencies:
@@ -13520,29 +13520,29 @@ __metadata:
   resolution: "next-todo@workspace:."
   dependencies:
     "@fortawesome/fontawesome-free": ^5.15.4
-    "@types/enzyme": ^3.10.11
+    "@types/enzyme": 3.10.11
     "@types/jest": ^27.0.2
-    "@types/next": ^9.0.0
-    "@types/react": ^17.0.39
-    "@types/react-dom": ^17.0.11
-    "@zeit/next-sass": ^1.0.1
-    babel-core: ^6.26.3
-    babel-eslint: ^10.1.0
-    babel-jest: ^27.1.0
-    bulma: ^0.9.3
-    enzyme: ^3.11.0
-    enzyme-adapter-react-16: ^1.15.6
-    eslint: ^7.32.0
-    eslint-plugin-react: ^7.28.0
-    jest: ^26.6.3
-    netlify-cli: ^8.16.1
-    next: ^12.0.10
+    "@types/next": 9.0.0
+    "@types/react": 17.0.39
+    "@types/react-dom": 17.0.11
+    "@zeit/next-sass": 1.0.1
+    babel-core: 6.26.3
+    babel-eslint: 10.1.0
+    babel-jest: 27.1.0
+    bulma: 0.9.3
+    enzyme: 3.11.0
+    enzyme-adapter-react-16: 1.15.6
+    eslint: 7.32.0
+    eslint-plugin-react: 7.28.0
+    jest: 26.6.3
+    netlify-cli: 8.16.1
+    next: 12.0.10
     node-sass: ^4.14.1
-    prop-types: ^15.7.2
-    react: ^16.14.0
-    react-addons-test-utils: ^15.6.2
-    react-dom: ^16.14.0
-    react-test-renderer: ^16.14.0
+    prop-types: 15.7.2
+    react: 16.14.0
+    react-addons-test-utils: 15.6.2
+    react-dom: 16.14.0
+    react-test-renderer: 16.14.0
   languageName: unknown
   linkType: soft
 
@@ -13619,7 +13619,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^12.0.10":
+"next@npm:12.0.10":
   version: 12.0.10
   resolution: "next@npm:12.0.10"
   dependencies:
@@ -15796,7 +15796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-addons-test-utils@npm:^15.6.2":
+"react-addons-test-utils@npm:15.6.2":
   version: 15.6.2
   resolution: "react-addons-test-utils@npm:15.6.2"
   peerDependencies:
@@ -15805,7 +15805,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^16.14.0":
+"react-dom@npm:16.14.0":
   version: 16.14.0
   resolution: "react-dom@npm:16.14.0"
   dependencies:
@@ -15840,7 +15840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:^16.0.0-0, react-test-renderer@npm:^16.14.0":
+"react-test-renderer@npm:16.14.0, react-test-renderer@npm:^16.0.0-0":
   version: 16.14.0
   resolution: "react-test-renderer@npm:16.14.0"
   dependencies:
@@ -15854,7 +15854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.14.0":
+"react@npm:16.14.0":
   version: 16.14.0
   resolution: "react@npm:16.14.0"
   dependencies:
