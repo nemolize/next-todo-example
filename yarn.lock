@@ -3272,13 +3272,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/enzyme@npm:3.10.11":
-  version: 3.10.11
-  resolution: "@types/enzyme@npm:3.10.11"
+"@types/enzyme@npm:3.10.13":
+  version: 3.10.13
+  resolution: "@types/enzyme@npm:3.10.13"
   dependencies:
     "@types/cheerio": "*"
-    "@types/react": "*"
-  checksum: 4085899b16e691e715f374345fae2963dc89a002c55a249381e37f94d93c8d016ad7208a8d11cc0f2d8c7cdfa6fa9f5590f0bfae984e51571f5d1e9c2d6ee782
+    "@types/react": ^16
+  checksum: a7983c56a9991bb9446a9468fbf0d5905d46574122ab76d87dab690685321bbe1875ce152f731481700a15e646b22560187ceb0b9591f5c6940a01be60e1f961
   languageName: node
   linkType: hard
 
@@ -3508,6 +3508,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: bf04d3c2894559012710d595553e12b422d3b91cd8f4f7e122d8cb044ba9c2ba17f6e8a4e09581359cc5509ddc59cd8c8fabd6774f3505a40a45393f074d6e6e
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^16":
+  version: 16.14.40
+  resolution: "@types/react@npm:16.14.40"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: f39af6e4bc1c5f85d3720109284caf5c8f2d771bf3f2d222abef89a46f369c640c25ac40fd318fb969e1ba06176443bca74a7ee563df8b1d947a21372bc707e7
   languageName: node
   linkType: hard
 
@@ -14046,7 +14057,7 @@ __metadata:
   resolution: "next-todo@workspace:."
   dependencies:
     "@fortawesome/fontawesome-free": ^5.15.4
-    "@types/enzyme": 3.10.11
+    "@types/enzyme": 3.10.13
     "@types/jest": ^27.0.2
     "@types/next": 9.0.0
     "@types/react": 17.0.39

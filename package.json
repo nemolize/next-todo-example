@@ -17,7 +17,7 @@
     "sass": "^1.49.7"
   },
   "devDependencies": {
-    "@types/enzyme": "3.10.11",
+    "@types/enzyme": "3.10.13",
     "@types/jest": "^27.0.2",
     "@types/next": "9.0.0",
     "@types/react": "17.0.39",
